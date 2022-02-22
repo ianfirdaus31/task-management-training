@@ -2,7 +2,7 @@ import { Body, Controller, Delete, Get, Param, Patch, Post, Query } from '@nestj
 import { CreateTaskDto } from 'src/tasks/dto/create-task.dto';
 import { GetTasksFilterDto } from 'src/tasks/dto/get-tasks-filter-dto';
 import { UpdateTaskStatusDto } from 'src/tasks/dto/update-task.dto';
-import { Task, TaskStatus } from 'src/tasks/tasks.model';
+import { Task, TaskStatus } from 'src/tasks/task.model';
 import { TasksService } from 'src/tasks/tasks.service';
 
 @Controller('tasks')
