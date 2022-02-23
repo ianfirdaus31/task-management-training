@@ -7,11 +7,11 @@ import { TasksModule } from './tasks/tasks.module';
     TasksModule, 
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
+      host: 'ifpostgres.cjmmccibo7cf.ap-southeast-1.rds.amazonaws.com',
       port: 5432,
       username: 'postgres',
-      password: 'postgres',
-      database: 'task-management',
+      password: '12345678',
+      database: 'postgres',
       autoLoadEntities: true,
       synchronize: true
     })
