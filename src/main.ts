@@ -4,9 +4,14 @@ import { TransformInterceptor } from 'src/transform.interceptor';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(AppModule)
+
+  app.enableCors()
   app.useGlobalPipes(new ValidationPipe())
   app.useGlobalInterceptors(new TransformInterceptor())
-  await app.listen(3003);
+
+  const port = process.env.APP_PORT
+
+  await app.listen(port)
 }
 bootstrap();
