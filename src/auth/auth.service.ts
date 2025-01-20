@@ -12,9 +12,7 @@ export class AuthService {
     @InjectRepository(UsersRepository)
     private usersRepo: UsersRepository,
     private jwtService: JwtService
-  ) {
-
-  }
+  ) {}
 
   async signUp(authCredentialDto: AuthCredentialsDto): Promise<void> {
     return this.usersRepo.createUser(authCredentialDto)
